@@ -17,21 +17,26 @@ namespace DollarComputer_RemediosMeneses
             InitializeComponent();
         }
 
-        Timer gmr;
-        private void LogoPictureBox_Click(object sender, EventArgs e)
+        private void SplashForm_Load(object sender, EventArgs e)
         {
-            gmr = new Timer();
-            gmr.Interval = 3000;
-            gmr.Start();
-            gmr.Tick += gmr_Tick;
+            // Start method to begin the Splashscreen
+            Timer.Start();
         }
-
-        private void gmr_Tick(object sender, EventArgs e)
+        
+        private void Timer_Tick(object sender, EventArgs e)
         {
-            gmr.Stop();
+            // Stop method to stop the Splashscreen
+            Timer.Stop();
+            
+            // Instantiate a new StartForm object 
             StartForm mf = new StartForm();
+
+            // A method to show the SplashForm
             mf.Show();
+
+            // A method to hide the SplashForm
             this.Hide();
         }
+
     }
 }

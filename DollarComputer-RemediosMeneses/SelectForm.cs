@@ -16,5 +16,24 @@ namespace DollarComputer_RemediosMeneses
         {
             InitializeComponent();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            ProductInfoForm mf = new ProductInfoForm();
+            mf.Show();
+            this.Hide();
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dollarComputersDBDataSet.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.dollarComputersDBDataSet.Products);
+
+        }
     }
 }

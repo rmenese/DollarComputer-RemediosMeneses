@@ -17,9 +17,27 @@ namespace DollarComputer_RemediosMeneses
             InitializeComponent();
         }
 
-        private void ProductIDLabel_Click(object sender, EventArgs e)
+        private void CancelButton2_Click(object sender, EventArgs e)
         {
-
+            // This method terminates ProductInfoForm
+            this.Hide();
         }
+
+        private void NextButton2_Click(object sender, EventArgs e)
+        {
+            // Instantiated a new OrderForm object
+            OrderForm mf = new OrderForm();
+
+            // This method display the OrderForm
+            mf.Show();
+
+            // Instantiated a new SelectForm object
+            SelectForm nf = new SelectForm();
+
+            // Stop or hide the SelectForm
+            nf.Hide();
+        }
+
+        
     }
 }
